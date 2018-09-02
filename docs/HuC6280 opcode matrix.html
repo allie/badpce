@@ -1,0 +1,599 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>HuC6280 opcode matrix</title>
+
+
+
+</head>
+
+<body>
+
+<h1>HuC6280 opcode matrix</h1>
+<table border="0" cellspacing="0" cellpadding="2" width="45%">
+  <tr align="center"> 
+    <td> <table border="0" cellspacing="0" cellpadding="2">
+        <tr> 
+          <td><table border="2" cellpadding="0" cellspacing="0" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000">
+              <tr> 
+                <td bgcolor="#CCCCCC"><font color="#CCCCCC"><strong>W</strong></font></td>
+              </tr>
+            </table></td>
+          <td><font face="Courier New, Courier, mono"><strong>=&nbsp;6502 (NMOS)<br>
+            instructions</strong></font></td>
+        </tr>
+      </table></td>
+    <td> <table border="0" cellspacing="0" cellpadding="2">
+        <tr> 
+          <td><table border="2" cellpadding="0" cellspacing="0" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000">
+              <tr> 
+                <td bgcolor="#FFFF99"><font color="#FFFF99"><strong>W</strong></font></td>
+              </tr>
+            </table></td>
+          <td><font face="Courier New, Courier, mono"><strong>=&nbsp;65C02 (WDC)<br>
+            added instructions</strong></font></td>
+        </tr>
+      </table></td>
+    <td> <table border="0" cellspacing="0" cellpadding="2">
+        <tr> 
+          <td><table border="2" cellpadding="0" cellspacing="0" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000">
+              <tr> 
+                <td bgcolor="#88ff44"><font color="#88ff44"><strong>W</strong></font></td>
+              </tr>
+            </table></td>
+          <td><font face="Courier New, Courier, mono"><strong>=&nbsp;HuC6280<br>
+            added instructions</strong></font></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table border="1">
+  <thead>
+  <tr>
+    <th></th>
+    <th>x0</th><th>x1</th><th>x2</th><th>x3</th><th>x4</th><th>x5</th><th>x6</th><th>x7</th>
+    <th>x8</th><th>x9</th><th>xA</th><th>xB</th><th>xC</th><th>xD</th><th>xE</th><th>xF</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th>0x</th>
+      <td bgcolor="#CCCCCC">BRK<br></td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        ix</td>
+      <td bgcolor="#88ff44">SXY<br></td>
+      <td bgcolor="#88FF44">ST0<br>
+        im</td>
+      <td bgcolor="#FFFF99">TSB<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">ASL<br>
+        zp</td>
+      <td bgcolor="#FFFF99">RMB0<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">PHP<br></td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        im</td>
+      <td bgcolor="#CCCCCC">ASL<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#FFFF99">TSB<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">ASL<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBR0<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>1x</th>
+      <td bgcolor="#CCCCCC">BPL<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        iy</td>
+      <td bgcolor="#FFFF99">ORA<br>
+        zpind</td>
+      <td bgcolor="#88FF44">ST1<br>
+        im</td>
+      <td bgcolor="#FFFF99">TRB<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">ASL<br>
+        zpx</td>
+      <td bgcolor="#FFFF99">RMB1<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">CLC<br></td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        aby</td>
+      <td bgcolor="#FFFF99">INC<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#FFFF99">TRB<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">ORA<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">ASL<br>
+        abx</td>
+      <td bgcolor="#FFFF99">BBR1<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>2x</th>
+      <td bgcolor="#CCCCCC">JSR<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">AND<br>
+        ix</td>
+      <td bgcolor="#88FF44">SAX<br></td>
+      <td bgcolor="#88FF44">ST2<br>
+        im</td>
+      <td bgcolor="#CCCCCC">BIT<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">AND<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">ROL<br>
+        zp</td>
+      <td bgcolor="#FFFF99">RMB2<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">PLP<br></td>
+      <td bgcolor="#CCCCCC">AND<br>
+        im</td>
+      <td bgcolor="#CCCCCC">ROL<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">BIT<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">AND<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">ROL<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBR2<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>3x</th>
+      <td bgcolor="#CCCCCC">BMI<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">AND<br>
+        iy</td>
+      <td bgcolor="#FFFF99">AND<br>
+        zpind</td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#FFFF99">BIT<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">AND<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">ROL<br>
+        zpx</td>
+      <td bgcolor="#FFFF99">RMB3<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">SEC<br></td>
+      <td bgcolor="#CCCCCC">AND<br>
+        aby</td>
+      <td bgcolor="#FFFF99">DEC<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#FFFF99">BIT<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">AND<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">ROL<br>
+        abx</td>
+      <td bgcolor="#FFFF99">BBR3<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>4x</th>
+      <td bgcolor="#CCCCCC">RTI<br></td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        ix</td>
+      <td bgcolor="#88FF44">SAY<br></td>
+      <td bgcolor="#88FF44">TMA<br>
+        im</td>
+      <td bgcolor="#88FF44">BSR<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">LSR<br>
+        zp</td>
+      <td bgcolor="#FFFF99">RMB4<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">PHA<br></td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        im</td>
+      <td bgcolor="#CCCCCC">LSR<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">JMP<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">LSR<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBR4<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>5x</th>
+      <td bgcolor="#CCCCCC">BVC<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        iy</td>
+      <td bgcolor="#FFFF99">EOR<br>
+        zpind</td>
+      <td bgcolor="#88FF44">TAM<br>
+        im</td>
+      <td bgcolor="#88FF44">CSL<br></td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">LSR<br>
+        zpx</td>
+      <td bgcolor="#FFFF99">RMB5<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">CLI<br></td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        aby</td>
+      <td bgcolor="#FFFF99">PHY<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">EOR<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">LSR<br>
+        abx</td>
+      <td bgcolor="#FFFF99">BBR5<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>6x</th>
+      <td bgcolor="#CCCCCC">RTS<br></td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        ix</td>
+      <td bgcolor="#88FF44">CLA<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#FFFF99">STZ<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">ROR<br>
+        zp</td>
+      <td bgcolor="#FFFF99">RMB6<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">PLA<br></td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        im</td>
+      <td bgcolor="#CCCCCC">ROR<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">JMP<br>
+        abind</td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">ROR<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBR6<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>7x</th>
+      <td bgcolor="#CCCCCC">BVS<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        iy</td>
+      <td bgcolor="#FFFF99">ADC<br>
+        zpind</td>
+      <td bgcolor="#88FF44">TII<br>
+        blk</td>
+      <td bgcolor="#FFFF99">STZ<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">ROR<br>
+        zpx</td>
+      <td bgcolor="#FFFF99">RMB7<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">SEI<br></td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        aby</td>
+      <td bgcolor="#FFFF99">PLY<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#FFFF99">JMP<br>
+        abindx</td>
+      <td bgcolor="#CCCCCC">ADC<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">ROR<br>
+        abx</td>
+      <td bgcolor="#FFFF99">BBR7<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>8x</th>
+      <td bgcolor="#FFFF99">BRA<br> rel</td>
+      <td bgcolor="#CCCCCC">STA<br>
+        ix</td>
+      <td bgcolor="#88FF44">CLX<br></td>
+      <td bgcolor="#88FF44">TST<br>
+        imzp</td>
+      <td bgcolor="#CCCCCC">STY<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">STA<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">STX<br>
+        zp</td>
+      <td bgcolor="#FFFF99">SMB0<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">DEY<br></td>
+      <td bgcolor="#FFFF99">BIT<br>
+        im</td>
+      <td bgcolor="#CCCCCC">TXA<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">STY<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">STA<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">STX<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBS0<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>9x</th>
+      <td bgcolor="#CCCCCC">BCC<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">STA<br>
+        iy</td>
+      <td bgcolor="#FFFF99">STA<br>
+        zpind</td>
+      <td bgcolor="#88FF44">TST<br>
+        imab</td>
+      <td bgcolor="#CCCCCC">STY<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">STA<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">STX<br>
+        zpy</td>
+      <td bgcolor="#FFFF99">SMB1<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">TYA<br></td>
+      <td bgcolor="#CCCCCC">STA<br>
+        aby</td>
+      <td bgcolor="#CCCCCC">TXS<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#FFFF99">STZ<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">STA<br>
+        abx</td>
+      <td bgcolor="#FFFF99">STZ<br>
+        abx</td>
+      <td bgcolor="#FFFF99">BBS1<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>Ax</th>
+      <td bgcolor="#CCCCCC">LDY<br>
+        im</td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        ix</td>
+      <td bgcolor="#CCCCCC">LDX<br>
+        im</td>
+      <td bgcolor="#88FF44">TST<br>
+        imzpx</td>
+      <td bgcolor="#CCCCCC">LDY<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">LDX<br>
+        zp</td>
+      <td bgcolor="#FFFF99">SMB2<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">TAY<br></td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        im</td>
+      <td bgcolor="#CCCCCC">TAX<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">LDY<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">LDX<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBS2<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>Bx</th>
+      <td bgcolor="#CCCCCC">BCS<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        iy</td>
+      <td bgcolor="#FFFF99">LDA<br>
+        zpind</td>
+      <td bgcolor="#88FF44">TST<br>
+        imabx</td>
+      <td bgcolor="#CCCCCC">LDY<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">LDX<br>
+        zpy</td>
+      <td bgcolor="#FFFF99">SMB3<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">CLV<br></td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        aby</td>
+      <td bgcolor="#CCCCCC">TSX<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">LDY<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">LDA<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">LDX<br>
+        aby</td>
+      <td bgcolor="#FFFF99">BBS3<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>Cx</th>
+      <td bgcolor="#CCCCCC">CPY<br>
+        im</td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        ix</td>
+      <td bgcolor="#88FF44">CLY<br></td>
+      <td bgcolor="#88FF44">TDD<br>
+        blk</td>
+      <td bgcolor="#CCCCCC">CPY<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">DEC<br>
+        zp</td>
+      <td bgcolor="#FFFF99">SMB4<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">INY<br></td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        im</td>
+      <td bgcolor="#CCCCCC">DEX<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">CPY<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">DEC<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBS4<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>Dx</th>
+      <td bgcolor="#CCCCCC">BNE<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        iy</td>
+      <td bgcolor="#FFFF99">CMP<br>
+        zpind</td>
+      <td bgcolor="#88FF44">TIN<br>
+        blk</td>
+      <td bgcolor="#88FF44">CSH<br></td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">DEC<br>
+        zpx</td>
+      <td bgcolor="#FFFF99">SMB5<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">CLD<br></td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        aby</td>
+      <td bgcolor="#FFFF99">PHX<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">CMP<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">DEC<br>
+        abx</td>
+      <td bgcolor="#FFFF99">BBS5<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>Ex</th>
+      <td bgcolor="#CCCCCC">CPX<br>
+        im</td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        ix</td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#88FF44">TIA<br>
+        blk</td>
+      <td bgcolor="#CCCCCC">CPX<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">INC<br>
+        zp</td>
+      <td bgcolor="#FFFF99">SMB6<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">INX<br></td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        im</td>
+      <td bgcolor="#CCCCCC">NOP<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">CPX<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        ab</td>
+      <td bgcolor="#CCCCCC">INC<br>
+        ab</td>
+      <td bgcolor="#FFFF99">BBS6<br>
+        zp rel</td>
+  </tr>
+  <tr>
+    <th>Fx</th>
+      <td bgcolor="#CCCCCC">BEQ<br>
+        rel</td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        iy</td>
+      <td bgcolor="#FFFF99">SBC<br>
+        zpind</td>
+      <td bgcolor="#88FF44">TAI<br>
+        blk</td>
+      <td bgcolor="#88FF44">SET<br></td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        zpx</td>
+      <td bgcolor="#CCCCCC">INC<br>
+        zpx</td>
+      <td bgcolor="#FFFF99">SMB7<br>
+        zp</td>
+      <td bgcolor="#CCCCCC">SED<br></td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        aby</td>
+      <td bgcolor="#FFFF99">PLX<br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#333333"><br></td>
+      <td bgcolor="#CCCCCC">SBC<br>
+        abx</td>
+      <td bgcolor="#CCCCCC">INC<br>
+        abx</td>
+      <td bgcolor="#FFFF99">BBS7<br>
+        zp rel</td>
+  </tr>
+</tbody>
+</table>
+
+<h1>Instructions new to the HuC6280:</h1>
+<table width="55%" border="2" cellpadding="2" cellspacing="0">
+  <tr> 
+    <td bgcolor="#66FF99">
+<p><font size="+1"><strong>SWAP registers</strong></font></p>
+      <p><font size="+1"><strong>SAX, SAY, SXY</strong></font></p></td>
+    <td bgcolor="#66FF99"> 
+      <p><font size="+1"><strong>CLEAR (zero-out) registers</strong></font></p>
+      <p><font size="+1"><strong>CLA, CLX, CLY</strong></font></p></td>
+    <td bgcolor="#66FF33">
+<p><font size="+1"><strong>TRANSFER Acc &lt;-&gt; MPR registers</strong></font></p>
+      <p><font size="+1"><strong>TAM&nbsp;<em>n</em>, TMA <em>n</em></strong></font></p></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#66FF99"> 
+      <p><font size="+1"><strong>TEST bits</strong></font></p>
+      <p><font size="+1"><strong>TST&nbsp;<em>n abs/zp</em> (,x)</strong></font></p></td>
+    <td bgcolor="#66FF33">
+<p><font size="+1"><strong>TRANSFER Block</strong></font></p>
+      <p><font size="+1"><strong>TII&nbsp;<em>ssss dddd llll</em><br>
+        TDD, TIA, TAI, TIN</strong></font></p></td>
+    <td bgcolor="#66FF33">
+<p><font size="+1"><strong>STORE to VDC ports</strong></font></p>
+      <p><font size="+1"><strong>ST0&nbsp;<em>n</em>, ST1 <em>n</em>, ST2 <em>n</em></strong></font></p></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#66FF99">
+<p><font size="+1"><strong>BRANCH to Subroutine</strong></font></p>
+      <p><font size="+1"><strong>BSR</strong></font></p></td>
+    <td bgcolor="#DDFF33"> 
+      <p><font size="+1"><strong>CLOCK Speed set</strong></font></p>
+      <p><font size="+1"><strong>CSH, CSL</strong></font></p></td>
+    <td bgcolor="#DDFF33"> 
+      <p><font size="+1"><strong>SET T flag (routes next arithmetic instruction 
+        through &lt;$00+X rather than Accumulator)</strong></font></p>
+      <p><font size="+1"><strong>SET </strong></font></p></td>
+  </tr>
+</table>
+<p>From Chris Covell's <a href="http://www.chrismcovell.com/PCEdev/index.html">PCE 
+  Tutorial</a></p>
+<p>(Original Page <a href="http://www6.atpages.jp/appsouko/work/PCE/6280op.html" target="_blank">HERE</a>) 
+</p>
+</body>
+</html>
